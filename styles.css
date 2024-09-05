@@ -42,7 +42,16 @@ p {
     font-family: 'Courier New', monospace;
     font-size: 14px;
     max-width: 90%;
-    word-wrap: break-word;
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+}
+
+pre {
+    margin: 0; /* Remove default margin */
+    white-space: pre-wrap; /* Ensures that text wraps correctly within the container */
+}
+
+code {
+    display: block; /* Ensure code block is properly aligned */
 }
 
 .rgb-image-container {
