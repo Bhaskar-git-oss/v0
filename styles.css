@@ -45,18 +45,19 @@ p {
     word-wrap: break-word;
 }
 
-.square-image-container, .image-container {
+.image-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 300px; /* Restrict max width */
     padding: 5px;
     background: linear-gradient(to right, red, green, blue);
 }
 
 .square-image {
-    width: 90%;
-    max-width: 200px;
+    width: 100%;
+    max-width: 100%; /* Match container width */
     height: auto;
     object-fit: cover;
     border: 2px solid transparent;
@@ -68,6 +69,10 @@ p {
     }
 
     .square-image {
-        max-width: 150px;
+        max-width: 100%; /* Ensure it adapts on smaller screens */
+    }
+
+    .image-container {
+        max-width: 200px; /* Resize container for smaller screens */
     }
 }
