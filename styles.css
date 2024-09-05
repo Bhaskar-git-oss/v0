@@ -1,5 +1,5 @@
 body {
-    background-color: #262626; /* Grey15 background */
+    background-color: #262626;
     margin: 0;
     padding: 0;
     display: flex;
@@ -45,37 +45,39 @@ p {
     word-wrap: break-word;
 }
 
-.image-container {
+.rgb-image-container {
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to right, red, green, blue) 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rgb-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.square-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 300px; /* Restrict max width */
+    max-width: 300px;
     padding: 5px;
-    background: linear-gradient(to right, red, green, blue);
 }
 
 .square-image {
     width: 100%;
-    max-width: 100%; /* Match container width */
+    max-width: 100%;
     height: auto;
     object-fit: cover;
-    border: 2px solid transparent;
 }
 
-@media (max-width: 600px) {
-    p {
-        font-size: 20px;
-    }
-
-    .square-image {
-        max-width: 100%; /* Ensure it adapts on smaller screens */
-    }
-
-    .image-container {
-        max-width: 200px; /* Resize container for smaller screens */
-    }
-}
 .github-container {
     text-align: center;
     margin-top: 20px;
@@ -109,4 +111,18 @@ p {
 
 .github-link:hover .github-logo {
     transform: rotate(360deg);
+}
+
+@media (max-width: 600px) {
+    p {
+        font-size: 20px;
+    }
+
+    .square-image {
+        max-width: 100%;
+    }
+
+    .image-container {
+        max-width: 200px;
+    }
 }
